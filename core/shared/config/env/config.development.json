@@ -1,26 +1,21 @@
 {
-    "url": "http://localhost:2368",
     "database": {
-        "client": "sqlite3",
+        "client": "mysql",
         "connection": {
-            "filename": "content/data/ghost-dev.db"
-        },
-        "debug": false
+            "host"     : "127.0.0.1",
+            "user"     : "root",
+            "password" : "root",
+            "database" : "ghost"
+        }
     },
     "paths": {
         "contentPath": "content/"
     },
-    "privacy": {
-        "useRpcPing": false,
-        "useUpdateCheck": true
-    },
-    "useMinFiles": false,
-    "caching": {
-        "theme": {
-            "maxAge": 0
+    "logging": {
+        "level": "info",
+        "rotation": {
+            "enabled": true
         },
-        "admin": {
-            "maxAge": 0
-        }
+        "transports": ["file", "stdout"]
     }
 }
